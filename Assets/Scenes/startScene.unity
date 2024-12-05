@@ -337,8 +337,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 36796332}
-  - component: {fileID: 36796333}
-  - component: {fileID: 36796334}
   m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -355,47 +353,14 @@ Transform:
   m_GameObject: {fileID: 36796331}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.05, y: 0, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2068971746}
   - {fileID: 1039476133}
-  - {fileID: 1472954041}
   m_Father: {fileID: 279037371}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &36796333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36796331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da332a2e19f644527a973aaa51a4384d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 1770993524}
-  heightOffset: -1
-  forwardOffset: 0.5
---- !u!114 &36796334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36796331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf0a4f24c6ff42bea6a48f68bce2094, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftSkatePosition: {fileID: 2068971746}
-  rightSkatePosition: {fileID: 1039476133}
-  skatePrefabs:
-  - {fileID: 7533977351827051999}
-  - {fileID: 2491650055038341739}
 --- !u!1 &46768803
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +868,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1472954042}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SkateColorChanger, Assembly-CSharp
         m_MethodName: ChangeSkateColor
         m_Mode: 3
@@ -2289,6 +2254,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 9835e622add2f4704ba8cb87c5298728, type: 2}
+--- !u!1 &692349445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
+  m_PrefabInstance: {fileID: 2068971745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &693091233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3038,19 +3008,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2
+      value: 0.225
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.475
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6087614
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3058,7 +3028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7933534
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3070,7 +3040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 105
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3870,55 +3840,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6889919700363869687, guid: 0a022c73cb4fc4c8b8d00ffea4b648ab, type: 3}
---- !u!1 &1472954040
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1472954041}
-  - component: {fileID: 1472954042}
-  m_Layer: 0
-  m_Name: skateColorChanger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1472954041
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472954040}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 36796332}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1472954042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472954040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf0a4f24c6ff42bea6a48f68bce2094, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftSkatePosition: {fileID: 2068971746}
-  rightSkatePosition: {fileID: 1039476133}
-  skatePrefabs:
-  - {fileID: 7533977351827051999}
-  - {fileID: 2491650055038341739}
 --- !u!1 &1539966588 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1287513492984656423, guid: f43688dc225f2419cb7fc6d949bab27c, type: 3}
@@ -4027,6 +3948,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 9a0b32dbb15634888ad4b33852399666, type: 2}
+--- !u!1 &1639811277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
+  m_PrefabInstance: {fileID: 1039476132}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1661066214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4262,9 +4188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da332a2e19f644527a973aaa51a4384d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  heightOffset: -1
-  forwardOffset: 0.2
+  playerOrigin: {fileID: 989055088}
+  rightHandReference: {fileID: 448858215}
+  leftHandReference: {fileID: 2109990250}
+  rightSkate: {fileID: 1639811277}
+  leftSkate: {fileID: 692349445}
 --- !u!114 &1770993526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5436,19 +5364,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7933534
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5456,7 +5384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.60876137
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5468,7 +5396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7cc26b0bb70844c68f0c49fa63d70b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -6342,7 +6270,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1472954042}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SkateColorChanger, Assembly-CSharp
         m_MethodName: ChangeSkateColor
         m_Mode: 3
@@ -6485,11 +6413,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d58c26601b44549b11762fa55b29dc, type: 3}
---- !u!1 &2491650055038341739 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2215385181460115384, guid: 56d58c26601b44549b11762fa55b29dc, type: 3}
-  m_PrefabInstance: {fileID: 2491650055038341738}
-  m_PrefabAsset: {fileID: 0}
 --- !u!33 &5160598006045825904
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6574,11 +6497,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b02ba13a0ff494945ac7d0962c014bb7, type: 3}
---- !u!1 &7533977351827051999 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8454367874780255030, guid: b02ba13a0ff494945ac7d0962c014bb7, type: 3}
-  m_PrefabInstance: {fileID: 7533977351827051998}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &9165478028643036097
 MeshRenderer:
   m_ObjectHideFlags: 0
