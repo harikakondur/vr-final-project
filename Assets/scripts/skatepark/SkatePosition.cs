@@ -4,10 +4,21 @@ public class SkatePosition : MonoBehaviour
 {
     public GameObject playerOrigin; // XR origin position 
     public GameObject rightHandReference; // Right hand controller position
-    public GameObject leftHandReference;
+    public GameObject leftHandReference; // Left hand controller position
 
     public GameObject rightSkate;
     public GameObject leftSkate;
+
+    public float rotationSensitivity = 1.2f; // How sensitive the rotation is to hand movements
+    private Quaternion previousRightSkateRotation;
+    private Quaternion previousLeftSkateRotation;
+
+    void Start()
+    {
+        // Initialize previous rotations
+        previousRightSkateRotation = rightSkate.transform.rotation;
+        previousLeftSkateRotation = leftSkate.transform.rotation;
+    }
 
     void Update()
     {
@@ -26,19 +37,31 @@ public class SkatePosition : MonoBehaviour
             leftHandReference.transform.position.z
         );
 
-        // Calculate the direction from player to hand positions
+        // Calculate the direction from the player to the hand positions
         Vector3 rightSkateDirection = rightHandPosition - playerPosition;
         Vector3 leftSkateDirection = leftHandPosition - playerPosition;
 
-        // Calculate the rotation only based on the hand direction (ignoring external movements like the continuous move provider)
+        // Scale the direction vectors by the sensitivity factor
+        rightSkateDirection *= rotationSensitivity;
+        leftSkateDirection *= rotationSensitivity;
+
+        // Calculate the rotation based on the hand's direction (ignoring external movements like the continuous move provider)
         if (rightSkateDirection != Vector3.zero)
         {
-            rightSkate.transform.rotation = Quaternion.LookRotation(rightSkateDirection)* Quaternion.Euler(0, 85, 0);
+            // Target rotation for the right skate
+            Quaternion targetRotationRight = Quaternion.LookRotation(rightSkateDirection);
+            // Apply the offset and smooth the rotation
+            rightSkate.transform.rotation = Quaternion.Slerp(previousRightSkateRotation, targetRotationRight * Quaternion.Euler(0, 85, 0), Time.deltaTime * rotationSensitivity);
+            previousRightSkateRotation = rightSkate.transform.rotation;
         }
 
         if (leftSkateDirection != Vector3.zero)
         {
-            leftSkate.transform.rotation = Quaternion.LookRotation(leftSkateDirection)* Quaternion.Euler(0, 95, 0);
+            // Target rotation for the left skate
+            Quaternion targetRotationLeft = Quaternion.LookRotation(leftSkateDirection);
+            // Apply the offset and smooth the rotation
+            leftSkate.transform.rotation = Quaternion.Slerp(previousLeftSkateRotation, targetRotationLeft * Quaternion.Euler(0, 95, 0), Time.deltaTime * rotationSensitivity);
+            previousLeftSkateRotation = leftSkate.transform.rotation;
         }
     }
 }

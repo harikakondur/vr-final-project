@@ -4193,6 +4193,7 @@ MonoBehaviour:
   leftHandReference: {fileID: 2109990250}
   rightSkate: {fileID: 1639811277}
   leftSkate: {fileID: 692349445}
+  rotationSensitivity: 5
 --- !u!114 &1770993526
 MonoBehaviour:
   m_ObjectHideFlags: 0
