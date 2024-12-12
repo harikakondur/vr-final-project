@@ -32,7 +32,7 @@ public class jump : MonoBehaviour
 
     //play jump sound
     jumpAudioSource.PlayOneShot(jumpSfx);
-    
+    Debug.Log("Jumping");
     velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
   }
 

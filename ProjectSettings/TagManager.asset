@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Rail
   - Box
+  - Ramp
   layers:
   - Default
   - TransparentFX
