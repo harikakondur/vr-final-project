@@ -13,7 +13,6 @@ public class SkatePosition : MonoBehaviour
     {
         Vector3 playerPosition = playerOrigin.transform.position;
 
-        // Align hands to the player's Y position for consistent height
         Vector3 rightHandPosition = new Vector3(
             rightHandReference.transform.position.x,
             playerPosition.y, 
@@ -30,7 +29,7 @@ public class SkatePosition : MonoBehaviour
         Vector3 rightSkateDirection = rightHandPosition - playerPosition;
         Vector3 leftSkateDirection = leftHandPosition - playerPosition;
 
-        // Calculate the rotation only based on the hand direction (ignoring external movements like the continuous move provider)
+        // Calculate the rotation only based on the hand direction (ignores character rotation)
         if (rightSkateDirection != Vector3.zero)
         {
             rightSkate.transform.rotation = Quaternion.LookRotation(rightSkateDirection)*rotationOffset;
