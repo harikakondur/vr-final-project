@@ -3722,8 +3722,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e91ce7500d34d348f273a1689a595c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 1125764757}
   BulletTemplate: {fileID: 232876521}
   shootPower: 1000
+  gunshotSFX: {fileID: 8300000, guid: 394fd7aaf1ea14300bcb3d3017d6a66e, type: 3}
   trigger: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!114 &1319357143
 MonoBehaviour:

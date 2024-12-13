@@ -6,9 +6,11 @@ using UnityEngine.InputSystem;
 
 public class playerShoot : MonoBehaviour
 {
+    public AudioSource audioSource;   
+
     public GameObject BulletTemplate;
     public float shootPower = 100f;
-    // public AudioClip gunshotSFX;
+    public AudioClip gunshotSFX;
 
     public InputActionReference trigger;
     // Start is called before the first frame update
@@ -37,9 +39,6 @@ public class playerShoot : MonoBehaviour
         GameObject newBullet = Instantiate(BulletTemplate, transform.position, transform.rotation);
         newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * shootPower);
 
-        // GetComponent<AudioSource>().PlayOneShot(gunshotSFX);
+        audioSource.PlayOneShot(gunshotSFX);
     }
 }
-
-
-//null reference exception while executing 'performed' callbacks of xri lefthand activate
