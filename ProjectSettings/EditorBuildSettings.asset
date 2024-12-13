@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/startScene.unity
     guid: d62419dd5b0c1459c92015aa248b9e1e
+  - enabled: 1
+    path: Assets/Scenes/skateparkScene.unity
+    guid: 58505563d66754820bff8dc19696e818
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: eb84867302ed045349bae371346a3123, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e592d543fd42b4c97a11ac8d978280ca, type: 2}
