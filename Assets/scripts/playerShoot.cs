@@ -13,29 +13,16 @@ public class playerShoot : MonoBehaviour
     public AudioClip gunshotSFX;
 
     public InputActionReference trigger;
-    // Start is called before the first frame update
     void Start()
     {
-        if (trigger == null)
-        {
-            Debug.LogError("Trigger reference is not assigned in the Inspector.");
-            return;
-        }
+        
 
-        if (trigger.action == null)
-        {
-            Debug.LogError("Action in trigger is null. Check the Input Action setup.");
-            return;
-        }
-
-        trigger.action.Enable(); // Optional, but ensures action is enabled
+        trigger.action.Enable(); 
         trigger.action.performed += Shoot;
-        Debug.Log("Trigger action successfully subscribed.");
     }
 
 
     void Shoot(InputAction.CallbackContext __) {
-        Debug.Log("Shooting");
         GameObject newBullet = Instantiate(BulletTemplate, transform.position, transform.rotation);
         newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * shootPower);
 

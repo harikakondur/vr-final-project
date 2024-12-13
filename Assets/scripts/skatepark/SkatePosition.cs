@@ -1,8 +1,8 @@
 using UnityEngine;
 
 public class SkatePosition : MonoBehaviour
-{public GameObject playerOrigin; // XR origin position 
-    public GameObject rightHandReference; // Right hand controller position
+{public GameObject playerOrigin; 
+    public GameObject rightHandReference; 
     public GameObject leftHandReference;
 
     public GameObject rightSkate;
