@@ -4700,7 +4700,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 3.9422507, y: 0, z: 6.5503106, w: 0}
+  m_margin: {x: 1.0656672, y: 0.74601793, z: 11.670937, w: 1.3799644}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -7271,7 +7271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletTemplate: {fileID: 1102657598484523723}
   shootPower: 1000
-  trigger: {fileID: 0}
+  trigger: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &2123848552 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 34814559798095410, guid: f43688dc225f2419cb7fc6d949bab27c, type: 3}
