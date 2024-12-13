@@ -42,7 +42,7 @@ public class enemyAI : MonoBehaviour
 
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "PlayerBullet"){
-        // Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
     }
 }
