@@ -1579,7 +1579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectAudioSource: {fileID: 1125764757}
-  collectSfx: {fileID: 8300000, guid: 1949cc89ec264496b902e58eaad0d70b, type: 3}
+  collectSfx: {fileID: 8300000, guid: 1b562ff04b4a54e5892cac57ee9f2744, type: 3}
 --- !u!135 &621255486
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2453,7 +2453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectAudioSource: {fileID: 1125764757}
-  collectSfx: {fileID: 8300000, guid: 1949cc89ec264496b902e58eaad0d70b, type: 3}
+  collectSfx: {fileID: 8300000, guid: 1b562ff04b4a54e5892cac57ee9f2744, type: 3}
 --- !u!135 &877016695
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2958,7 +2958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectAudioSource: {fileID: 1125764757}
-  collectSfx: {fileID: 8300000, guid: 1949cc89ec264496b902e58eaad0d70b, type: 3}
+  collectSfx: {fileID: 8300000, guid: 1b562ff04b4a54e5892cac57ee9f2744, type: 3}
 --- !u!135 &998246627
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4300,7 +4300,7 @@ MonoBehaviour:
   audioSource: {fileID: 1125764757}
   BulletTemplate: {fileID: 232876521}
   shootPower: 1000
-  gunshotSFX: {fileID: 8300000, guid: 394fd7aaf1ea14300bcb3d3017d6a66e, type: 3}
+  gunshotSFX: {fileID: 8300000, guid: 0cb779081d2de4f63a150e62d16a4917, type: 3}
   trigger: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!114 &1319357143
 MonoBehaviour:
@@ -5486,7 +5486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectAudioSource: {fileID: 1125764757}
-  collectSfx: {fileID: 8300000, guid: 1949cc89ec264496b902e58eaad0d70b, type: 3}
+  collectSfx: {fileID: 8300000, guid: 1b562ff04b4a54e5892cac57ee9f2744, type: 3}
 --- !u!135 &1430037019
 SphereCollider:
   m_ObjectHideFlags: 0
